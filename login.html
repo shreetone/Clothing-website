@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(pink,yellow);
+            background-size: cover;
+           
+        }
+        .wrapper {
+            width: 350px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        .wrapper .title {
+            padding: 20px 0;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            color: white;
+            font-size: 28px;
+            font-weight: 600;
+            text-align: center;
+        }
+        .wrapper form {
+            padding: 30px 25px;
+        }
+        .wrapper form .row {
+            margin-bottom: 20px;
+            position: relative;
+        }
+        .wrapper form .row input {
+            height: 45px;
+            width: 100%;
+            padding: 0 15px 0 40px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        .wrapper form .row input:focus {
+            border-color: #ff9a9e;
+            box-shadow: 0 0 5px rgba(255, 154, 158, 0.5);
+            outline: none;
+        }
+        .wrapper form .row i {
+            position: absolute;
+            width: 40px;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #888;
+        }
+        .wrapper form .pass {
+            text-align: right;
+            margin: -8px 0 15px 0;
+        }
+        .wrapper form .pass a {
+            color: #ff9a9e;
+            font-size: 14px;
+            text-decoration: none;
+        }
+        .wrapper form .pass a:hover {
+            text-decoration: underline;
+        }
+        .wrapper form .row button {
+            height: 45px;
+            width: 100%;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 18px;
+            font-weight: 500;
+            cursor: pointer;
+        }
+        .wrapper form .row button:hover {
+            background: linear-gradient(135deg, #f78ca0 0%, #f9748f 100%);
+        }
+        .wrapper form .signup-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .wrapper form .signup-link a {
+            color: #ff9a9e;
+            text-decoration: none;
+        }
+        .wrapper form .signup-link a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Login Form</div>
+        <form action="#" method="POST">
+            <div class="row">
+                <i class="fas fa-user"></i>
+                <input type="text" placeholder="Username or Email" required>
+            </div>
+
+            <div class="row">
+                <i class="fas fa-lock"></i>
+                <input type="password" placeholder="Password" required>
+            </div>
+
+            <div class="pass"><a href="#">Forgot password?</a></div>
+
+            <div class="row">
+                <button type="submit">Login</button>
+            </div>
+
+            <div class="signup-link">Not a member? <a href="./Register.html">Register Now</a></div>
+        </form>
+    </div>
+</body>
+</html>

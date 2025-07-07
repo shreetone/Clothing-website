@@ -164,6 +164,13 @@ function renderProducts(productsRender = products) {
 // renderProducts();
 
 const cartTableElmt = document.querySelector("#cartTable");
+function removefromCart(ID){
+  cartFromLocalArray=localGetCart()
+  cartFromLocalArray.findIndex((p)=>p.id==ID)
+  cartFromLocalArray.splice(index,1)
+  localSaveCart(cartFromLocalArray)
+  renderCart()
+}
 
 function renderCart() {
   const cartFromLocal = localGetCart();
@@ -174,7 +181,7 @@ function renderCart() {
                               <th scope="row">${i}</th>
                               <td>${p.name}</td>
                               <td>${p.price}</td>
-                              <td><button class="btn btn-danger" >Remove from cart</button></td>
+                              <td><button class="btn btn-danger" onclick="removefromCart(${p.id})">Remove from cart</button></td>
                             </tr>
     `
   );
@@ -194,3 +201,5 @@ const v2 = localGetProducts()
     renderCart();
   }
 });
+
+
